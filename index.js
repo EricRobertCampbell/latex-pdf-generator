@@ -15,17 +15,18 @@ app.post("/", (req, res) => {
 		return;
 	}
 
-	fs.writeFileSync("main.tex", fileString);
+	fs.writeFileSync("/tmp/main.tex", fileString);
 
 	const clean = spawnSync("latexmk", ["-C"]);
 	const process = spawnSync("latexmk", [
-		"main.tex",
+		"/tmp/main.tex",
 		"-pdf",
 		"--shell-escape",
+		"-output-directory=/tmp/",
 	]);
 
 	// read the file in
-	fs.readFile("main.pdf", (err, data) => {
+	fs.readFile("/tmp/main.pdf", (err, data) => {
 		if (err) {
 			res.status(500).send(`Error: ${err}`);
 		}
