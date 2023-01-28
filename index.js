@@ -7,15 +7,12 @@ const port = 3000;
 
 app.use(express.json());
 
-app.post("/", (req, res) => {
-	const fileString = req.body.string;
-	// console.log("body", req);
-	if (!fileString) {
-		res.status(500).send(req.body);
+const doEverything = (fileText, cb) => {
+	if (!fileText) {
 		return;
 	}
 
-	fs.writeFileSync("/tmp/main.tex", fileString);
+	fs.writeFileSync("/tmp/main.tex", fileText);
 
 	const clean = spawnSync("latexmk", ["-C"]);
 	const process = spawnSync("latexmk", [
@@ -28,7 +25,8 @@ app.post("/", (req, res) => {
 	// read the file in
 	fs.readFile("/tmp/main.pdf", (err, data) => {
 		if (err) {
-			res.status(500).send(`Error: ${err}`);
+			return;
+			// res.status(500).send(`Error: ${err}`);
 		}
 		console.log(`got pdf data`, data);
 		let base64String;
@@ -41,8 +39,13 @@ app.post("/", (req, res) => {
 			console.error(e);
 			throw e;
 		}
-		res.status(200).send(base64String);
+		cb(base64String);
 	});
+};
+app.post("/", (req, res) => {
+	const fileString = req.body.string;
+	// console.log("body", req);
+	doEverything(fileString, (data) => res.status(200).send(data));
 });
 
 app.listen(port, () => {
