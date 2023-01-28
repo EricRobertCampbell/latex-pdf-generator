@@ -1,0 +1,22 @@
+{
+  "name": "pdf-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricRobertCampbell/latex-pdf-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricRobertCampbell/latex-pdf-generator/issues"
+  },
+  "homepage": "https://github.com/EricRobertCampbell/latex-pdf-generator#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
