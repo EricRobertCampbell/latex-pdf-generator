@@ -6,15 +6,14 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.post("/", (req, res) => {
-	console.log("req:", req);
 	const fileString = req.body.string;
+	console.log("body", req);
 	if (!fileString) {
-		res.status(500).send(
-			`Error: no "string" in body: ${JSON.parse(req.body)}`
-		);
+		res.status(500).send(req.body);
+		return;
 	}
 
 	fs.writeFileSync("main.tex", fileString);
