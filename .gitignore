@@ -1,1 +1,7 @@
 node_modules
+
+# latex intermediate files
+*.aux
+*.fdb_latemk
+*.fls
+*.log

@@ -1,7 +1,6 @@
 const express = require("express");
 const { spawn, spawnSync } = require("child_process");
 const fs = require("fs");
-const bodyParser = require("body-parser");
 
 const app = express();
 const port = 3000;
@@ -10,7 +9,7 @@ app.use(express.json());
 
 app.post("/", (req, res) => {
 	const fileString = req.body.string;
-	console.log("body", req);
+	// console.log("body", req);
 	if (!fileString) {
 		res.status(500).send(req.body);
 		return;
@@ -18,8 +17,12 @@ app.post("/", (req, res) => {
 
 	fs.writeFileSync("main.tex", fileString);
 
-	const clean = spawnSync("latexmk", ["-c"]);
-	const process = spawnSync("latexmk", ["-pdf", "--shell-escape"]);
+	const clean = spawnSync("latexmk", ["-C"]);
+	const process = spawnSync("latexmk", [
+		"main.tex",
+		"-pdf",
+		"--shell-escape",
+	]);
 
 	// read the file in
 	fs.readFile("main.pdf", (err, data) => {
@@ -39,7 +42,6 @@ app.post("/", (req, res) => {
 		}
 		res.status(200).send(base64String);
 	});
-	res.status(200).send(req.body);
 });
 
 app.listen(port, () => {
