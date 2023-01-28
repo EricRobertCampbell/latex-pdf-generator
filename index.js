@@ -1,5 +1,5 @@
 const express = require("express");
-const { spawn, spawnSync } = require("child_process");
+const { spawnSync } = require("child_process");
 const fs = require("fs");
 
 const app = express();
@@ -7,7 +7,7 @@ const port = 3000;
 
 app.use(express.json());
 
-const doEverything = (fileText, cb) => {
+const doEverything = (fileText) => {
 	if (!fileText) {
 		return;
 	}
@@ -23,29 +23,27 @@ const doEverything = (fileText, cb) => {
 	]);
 
 	// read the file in
-	fs.readFile("/tmp/main.pdf", (err, data) => {
-		if (err) {
-			return;
-			// res.status(500).send(`Error: ${err}`);
-		}
-		console.log(`got pdf data`, data);
-		let base64String;
-		try {
-			base64String = data.toString("base64");
-			// console.log(base64String);
-			console.log("success");
-		} catch (e) {
-			console.error("Error getting the pdf file contents");
-			console.error(e);
-			throw e;
-		}
-		cb(base64String);
-	});
+	const fileData = fs.readFileSync("/tmp/main.pdf");
+	console.log(`got pdf data`, fileData);
+	let base64String;
+	try {
+		base64String = fileData.toString("base64");
+		// console.log(base64String);
+		console.log("success");
+	} catch (e) {
+		console.error("Error getting the pdf file contents");
+		console.error(e);
+		throw e;
+	}
+
+	return base64String;
 };
 app.post("/", (req, res) => {
 	const fileString = req.body.string;
 	// console.log("body", req);
-	doEverything(fileString, (data) => res.status(200).send(data));
+	const data = doEverything(fileString);
+	console.log("data:", data);
+	res.status(200).send(data);
 });
 
 app.listen(port, () => {
