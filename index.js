@@ -2,6 +2,7 @@ const express = require("express");
 const { spawnSync } = require("child_process");
 const fs = require("fs");
 
+const baseDir = "/tmp";
 const app = express();
 const port = 3000;
 
@@ -12,18 +13,18 @@ const doEverything = (fileText) => {
 		return;
 	}
 
-	fs.writeFileSync("/tmp/main.tex", fileText);
+	fs.writeFileSync(`${baseDir}/main.tex`, fileText);
 
 	const clean = spawnSync("latexmk", ["-C"]);
 	const process = spawnSync("latexmk", [
-		"/tmp/main.tex",
+		`${baseDir}/main.tex`,
 		"-pdf",
 		"--shell-escape",
-		"-output-directory=/tmp/",
+		`-output-directory=${baseDir}`,
 	]);
 
 	// read the file in
-	const fileData = fs.readFileSync("/tmp/main.pdf");
+	const fileData = fs.readFileSync(`${baseDir}/main.pdf`);
 	console.log(`got pdf data`, fileData);
 	let base64String;
 	try {
