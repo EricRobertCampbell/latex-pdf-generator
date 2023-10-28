@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/EricRobertCampbell/latex-pdf-generator/compare/v1.3.1...v1.3.2) (2023-10-28)
+
+
+### Bug Fixes
+
+* project is now built when docker image is run ([988ea0b](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/988ea0b18b27865b6f31400dfb58d4a87b8ada16))
+
 ### [1.3.1](https://github.com/EricRobertCampbell/latex-pdf-generator/compare/v1.3.0...v1.3.1) (2023-10-28)
 
 ## 1.3.0 (2023-10-28)
