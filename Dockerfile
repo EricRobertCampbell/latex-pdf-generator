@@ -6,7 +6,7 @@ RUN apk update && apk add texlive
 
 COPY ./ ./
 
-RUN npm build
+RUN npm run build
 CMD ["node", "./dist/index.js"]
 
 EXPOSE 3000
