@@ -8,6 +8,18 @@ This is a project to create an API endpoint to which someone can send a latex fi
 npm run build && npm run deploy
 ```
 
+## Developing Locally
+
+1. Start the docker daemon (run Docker Desktop from windows)
+1. Build and start the container
+
+```bash
+docker build -t latex-pdf-generator .
+docker run -dp 3000:3000 latex-pdf-generator
+```
+
+The server should now be running on port 3000.
+
 # Generating the PDF
 
 Currently the endpoint is at `https://latex-pdf-generator.fly.dev`; send a post request with the body
