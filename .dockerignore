@@ -1,0 +1,8 @@
+# flyctl launch added from .gitignore
+
+# latex intermediate files
+**/*.aux
+**/*.fdb_latemk
+**/*.fls
+**/*.log
+fly.toml

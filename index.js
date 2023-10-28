@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const { spawnSync } = require("child_process");
 const fs = require("fs");
 
@@ -7,6 +8,7 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+app.use(cors());
 
 const doEverything = (fileText) => {
 	if (!fileText) {
@@ -41,6 +43,7 @@ const doEverything = (fileText) => {
 };
 app.post("/", (req, res) => {
 	const fileString = req.body.string;
+	console.log("body:", req.body);
 	// console.log("body", req);
 	const data = doEverything(fileString);
 	console.log("data:", data);
