@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/EricRobertCampbell/latex-pdf-generator/compare/v1.6.0...v1.6.1) (2023-10-28)
+
+
+### Bug Fixes
+
+* missing typescript for build ([bd48076](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/bd48076f4da70ea63aace4c2e918dac83490a8ce))
+
 ## 1.6.0 (2023-10-28)
 
 
