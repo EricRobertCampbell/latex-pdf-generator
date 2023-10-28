@@ -3,6 +3,9 @@ import { v4 as uuidv4 } from "uuid";
 const cors = require("cors");
 const { spawnSync } = require("child_process");
 const fs = require("fs");
+import "dotenv/config";
+
+import { validateToken } from "./src/utility/authentication/functions";
 
 const baseDir = "./tmp";
 const app: Express = express();
@@ -51,12 +54,18 @@ const doEverything = (fileText: string) => {
 
 	return base64String;
 };
-app.post("/", (req: Request, res: Response) => {
+app.post("/", async (req: Request, res: Response) => {
+	const token = req.body.token;
+	const isTokenValid = await validateToken(token);
+	if (!isTokenValid) {
+		res.status(401).send(`Invalid token ${token} provided.`);
+		return;
+	}
 	const fileString = req.body.string;
 	console.log("body:", req.body);
 	// console.log("body", req);
 	const data = doEverything(fileString);
-	console.log("data:", data);
+	// console.log("data:", data);
 	res.status(200).send(data);
 });
 
