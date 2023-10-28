@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.5.0 (2023-10-28)
+
+
+### Features
+
+* added automatic versioning and linting ([c2923c2](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/c2923c2271fa32baa0ade72d99154bb3d9d50f76)), closes [#7](https://github.com/EricRobertCampbell/latex-pdf-generator/issues/7)
+* added rudimentary authentication ([423a8d6](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/423a8d6938a5acef2f8363d6ea53d4112277a9ce)), closes [#3](https://github.com/EricRobertCampbell/latex-pdf-generator/issues/3)
+* added typescript ([99b069a](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/99b069aa32cd5434e15894f45a7b1ec2c1c4530a)), closes [#1](https://github.com/EricRobertCampbell/latex-pdf-generator/issues/1)
+* automatic deployment to fly.io on push to main ([6b35e1a](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/6b35e1a16dc83c127ec7a33367a6ed57fe2135bf)), closes [#5](https://github.com/EricRobertCampbell/latex-pdf-generator/issues/5)
+* each new request now has its own directory ([2e563c1](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/2e563c15bcd761a839300349b171483f9a52bee1)), closes [#2](https://github.com/EricRobertCampbell/latex-pdf-generator/issues/2)
+* endpoint now handles strings and zip files ([74bae20](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/74bae2061511b32b06d706a3c4967439cfa96736)), closes [#4](https://github.com/EricRobertCampbell/latex-pdf-generator/issues/4)
+* partially working? ([2b9a6b2](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/2b9a6b27d5ed86d66151dd9885df4d695d92c1f4))
+* switched authorization to authorization header ([4917d71](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/4917d7110d6c9d029f15f4d7efd6e1d40582ecf1)), closes [#11](https://github.com/EricRobertCampbell/latex-pdf-generator/issues/11)
+* update readme ([313f739](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/313f7394f2e30b5e2398c1d98112cbfee0d413f3))
+* updated fly.toml ([3fbff07](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/3fbff07294ddc741cb18acaa9928e2673dd22ef5))
+
+
+### Bug Fixes
+
+* actually running build on deploy ([d94371a](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/d94371a30f0416d6bc4c2938cdc30db61a449988))
+* project is now built when docker image is run ([0ec68d7](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/0ec68d74136d4284e96a3d1e707cfa2c6537624c))
+
 ### [1.4.1](https://github.com/EricRobertCampbell/latex-pdf-generator/compare/v1.4.0...v1.4.1) (2023-10-28)
 
 
