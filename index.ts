@@ -1,16 +1,16 @@
-const express = require("express");
+import express, { Express, Request, Response } from "express";
 const cors = require("cors");
 const { spawnSync } = require("child_process");
 const fs = require("fs");
 
 const baseDir = "/tmp";
-const app = express();
+const app: Express = express();
 const port = 3000;
 
 app.use(express.json());
 app.use(cors());
 
-const doEverything = (fileText) => {
+const doEverything = (fileText: string) => {
 	if (!fileText) {
 		return;
 	}
@@ -41,7 +41,7 @@ const doEverything = (fileText) => {
 
 	return base64String;
 };
-app.post("/", (req, res) => {
+app.post("/", (req: Request, res: Response) => {
 	const fileString = req.body.string;
 	console.log("body:", req.body);
 	// console.log("body", req);
