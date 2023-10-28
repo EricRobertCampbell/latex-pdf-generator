@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/EricRobertCampbell/latex-pdf-generator/compare/v1.4.0...v1.4.1) (2023-10-28)
+
+
+### Bug Fixes
+
+* actually running build on deploy ([7f9d39f](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/7f9d39f99a934c0150717771f0ff4f665d64805a))
+
 ## 1.4.0 (2023-10-28)
 
 ### Features
