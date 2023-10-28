@@ -5,7 +5,7 @@ This is a project to create an API endpoint to which someone can send a latex fi
 ## To Deploy
 
 ```bash
-fly deploy
+npm run build && npm run deploy
 ```
 
 # Generating the PDF
