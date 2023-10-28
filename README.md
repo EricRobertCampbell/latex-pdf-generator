@@ -10,15 +10,17 @@ npm run build && npm run deploy
 
 ## Developing Locally
 
-1. Start the docker daemon (run Docker Desktop from windows)
-1. Build and start the container
-
 ```bash
-docker build -t latex-pdf-generator .
-docker run -dp 3000:3000 latex-pdf-generator
+npm run dev
 ```
 
-The server should now be running on port 3000.
+This will run the server on port 3000 by default.
+
+## Setting the Secrets
+To set the appropriate secrets in fly.io
+```
+fly secrets set ACCEPTED_AUTH_KEY=<the key>
+```
 
 # Generating the PDF
 
