@@ -17,7 +17,9 @@ npm run dev
 This will run the server on port 3000 by default.
 
 ## Setting the Secrets
+
 To set the appropriate secrets in fly.io
+
 ```
 fly secrets set ACCEPTED_AUTH_KEY=<the key>
 ```

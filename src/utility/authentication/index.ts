@@ -1,1 +1,1 @@
-export { validateToken } from './functions'
+export { validateToken } from "./functions";
