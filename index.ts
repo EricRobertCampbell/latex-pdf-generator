@@ -55,10 +55,12 @@ const doEverything = (fileText: string) => {
 	return base64String;
 };
 app.post("/", async (req: Request, res: Response) => {
-	const token = req.body.token;
-	const isTokenValid = await validateToken(token);
+	const authorizationHeader = req.header("Authorization");
+	const isTokenValid = await validateToken(authorizationHeader);
 	if (!isTokenValid) {
-		res.status(401).send(`Invalid token ${token} provided.`);
+		res.status(401).send(
+			`Invalid authorization header ${authorizationHeader} provided.`
+		);
 		return;
 	}
 	const fileString = req.body.string;
