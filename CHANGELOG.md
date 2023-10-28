@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/EricRobertCampbell/latex-pdf-generator/compare/v1.1.0...v1.2.0) (2023-10-28)
+
+
+### Features
+
+* automatic deployment to fly.io on push to main ([411327a](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/411327aa8b3e595bffaaafecdfdb8fb50076282f)), closes [#5](https://github.com/EricRobertCampbell/latex-pdf-generator/issues/5)
+
 ## 1.1.0 (2023-10-28)
 
 ### Features
