@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.4](https://github.com/EricRobertCampbell/latex-pdf-generator/compare/v1.6.3...v1.6.4) (2023-10-30)
+
+
+### Bug Fixes
+
+* ignored formatting on changelog ([ffe8306](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/ffe8306ebd2c983dde86eeba9c190c99e4db90e5)), closes [#37](https://github.com/EricRobertCampbell/latex-pdf-generator/issues/37)
+
 ### [1.6.3](https://github.com/EricRobertCampbell/latex-pdf-generator/compare/v1.6.2...v1.6.3) (2023-10-30)
 
 ### [1.6.2](https://github.com/EricRobertCampbell/latex-pdf-generator/compare/v1.6.1...v1.6.2) (2023-10-30)
