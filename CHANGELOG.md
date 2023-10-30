@@ -4,19 +4,17 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.6.2](https://github.com/EricRobertCampbell/latex-pdf-generator/compare/v1.6.1...v1.6.2) (2023-10-30)
 
-
 ### Bug Fixes
 
-* 100% it's fixed now ([241c602](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/241c6020d7b1a6abd0212d751dcba7ce353d612e))
-* changed automatic deploy to happen only on main ([a1f7c6a](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/a1f7c6a26f6e78f59a6b9b4d6df8f6f084cf2867))
-* for sure it will be deployed now ([7c355c1](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/7c355c1087aaa6f593c32b66cfaef96760ec0b6d))
+- 100% it's fixed now ([241c602](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/241c6020d7b1a6abd0212d751dcba7ce353d612e))
+- changed automatic deploy to happen only on main ([a1f7c6a](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/a1f7c6a26f6e78f59a6b9b4d6df8f6f084cf2867))
+- for sure it will be deployed now ([7c355c1](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/7c355c1087aaa6f593c32b66cfaef96760ec0b6d))
 
 ### [1.6.1](https://github.com/EricRobertCampbell/latex-pdf-generator/compare/v1.6.0...v1.6.1) (2023-10-28)
 
-
 ### Bug Fixes
 
-* missing typescript for build ([bd48076](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/bd48076f4da70ea63aace4c2e918dac83490a8ce))
+- missing typescript for build ([bd48076](https://github.com/EricRobertCampbell/latex-pdf-generator/commit/bd48076f4da70ea63aace4c2e918dac83490a8ce))
 
 ## 1.6.0 (2023-10-28)
 
