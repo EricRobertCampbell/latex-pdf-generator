@@ -6,6 +6,7 @@ RUN apk update && apk add texlive
 
 COPY ./ ./
 
+RUN npm install typescript
 RUN npm run build
 CMD ["node", "./dist/index.js"]
 
