@@ -4,6 +4,8 @@ This is a project to create an API endpoint to which someone can send a latex fi
 
 ## To Deploy
 
+Note that this will automatically whenever anything is merged to main; you should ideally never have to do this manually.
+
 ```bash
 npm run build && npm run deploy
 ```
